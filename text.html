@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <article id="text-box"></article>
+    <button onclick="addNewElement()">Click Me</button>
+
+    <script>
+        // Create an array called listOfWords
+        const listOfWords = ["Beautiful", "Grand", "Brave", "Powerful"]
+        // Create a variable to count the number of clicks
+        let clicks = 0
+
+        let alarm = "End of Array"
+
+        const addNewElement = () => {
+
+            // Use the document method: .createElement() to create a <p> element
+            const newParagraph = document.createElement("p")
+
+            // Use the .createTextNode() method to create a text node with each of the words of the array
+            // ON LINE 25 - Replace the "me" to Practice Bracket-Notation and make this function access each element one-at-a-time using the "clicks" as a value for the indexes of the array.
+            const newText = document.createTextNode(listOfWords[clicks])
+
+            // Then attach the text node to the new <p> element
+            newParagraph.appendChild(newText)
+
+            // Next, hold the value of the <article> element
+            const myElement = document.getElementById("text-box")
+
+            // Then add the new <p> element with the new text node inside it to the <article> element
+            myElement.appendChild(newParagraph)
+
+            // Each time this function runs add 1 to the value of clicks so we can iterate over the array
+            clicks++
+
+            return console.log(clicks)
+        }
+    </script>
+</body>
+
+</html>

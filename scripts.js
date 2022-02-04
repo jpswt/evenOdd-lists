@@ -23,12 +23,5 @@ function handleSubmit() {
 
     usersWord = ""
     document.getElementById("even-odd-form").reset()
-  }
+}
 
-  function runScript(e) {
-      if(e.keycode == 13) {
-          let tb = document.getElementById("word")
-          eval(tb.value)
-          return false
-      }
-  }
